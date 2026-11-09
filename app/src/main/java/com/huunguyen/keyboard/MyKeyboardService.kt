@@ -82,6 +82,9 @@ class MyKeyboardService : InputMethodService() {
         return root
     }
 
+    // Không cho bàn phím tự chuyển sang chế độ toàn màn hình
+    override fun onEvaluateFullscreenMode(): Boolean = false
+
     override fun onStartInputView(info: android.view.inputmethod.EditorInfo?, restarting: Boolean) {
         super.onStartInputView(info, restarting)
         if (::glow.isInitialized) glow.play()
