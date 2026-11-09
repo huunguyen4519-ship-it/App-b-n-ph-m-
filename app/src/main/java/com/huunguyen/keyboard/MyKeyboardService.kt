@@ -28,6 +28,10 @@ class MyKeyboardService : InputMethodService() {
     override fun onCreateInputView(): View {
         val root = FrameLayout(this).apply {
             setBackgroundColor(Color.parseColor("#0D1117"))
+            layoutParams = ViewGroup.LayoutParams(
+                ViewGroup.LayoutParams.MATCH_PARENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT
+            )
         }
 
         val column = LinearLayout(this).apply {
